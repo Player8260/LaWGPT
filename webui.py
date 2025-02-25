@@ -59,6 +59,7 @@ def main(
             base_model,
             device_map={"": device},
             torch_dtype=torch.float16,
+            trust_remote_code=True,
         )
         try:
             model = PeftModel.from_pretrained(
