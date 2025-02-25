@@ -44,6 +44,7 @@ def main(
             load_in_8bit=load_8bit,
             torch_dtype=torch.float16,
             device_map="auto",
+            trust_remote_code=true,
         )
         try:
             model = PeftModel.from_pretrained(
