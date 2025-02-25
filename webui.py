@@ -66,6 +66,7 @@ def main(
                 lora_weights,
                 device_map={"": device},
                 torch_dtype=torch.float16,
+                trust_remote_code=True,
             )
         except:
             print("*"*50, "\n Attention! No Lora Weights \n", "*"*50)
@@ -78,6 +79,7 @@ def main(
                 model,
                 lora_weights,
                 device_map={"": device},
+                trust_remote_code=True,
             )
         except:
             print("*"*50, "\n Attention! No Lora Weights \n", "*"*50)
